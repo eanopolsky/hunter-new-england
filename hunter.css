@@ -1,0 +1,207 @@
+body {
+    font-family: "Times New Roman", Times, serif; /* default font */
+    margin: 0; /* h1, h2, etc. bars should go to the edge of the page */
+}
+
+div.figure {
+    text-align: center; /* figures should be centered */
+}
+
+div.figure img[banner-image], div.figure object[banner-image] {
+    /* top of notes images that set the mood */
+    max-width: 100%;
+}
+
+div.figure img[zoomable], div.figure object[zoomable] {
+    /* Limit decorative image width to container width to prevent
+   horizontal scrolling at normal zoom levels. This ensures the h2
+   headers extend to the right edge of the page. Note that setting
+   max-width to 100% prevents further zooming once outline-4 is as
+   wide as the browser window, which prevents close inspection of the
+   relationship map. Setting to an em value allows the image to
+   continue growing. */
+    max-width: 100%;
+}
+
+span.figure-number {
+    display: none; /* display the caption but hide the numeric figure count */
+}
+
+div#postamble {
+    display: none; /* don't show author, creation time info at the bottom */
+}
+
+a[href] {
+    color: darkorange; /* links should be orange ... */
+}
+
+h1 a[href], h2 a[href], h3 a[href], h4 a[href] {
+    color: black; /* ... except for "accidental" links in section titles ... */
+    text-decoration: none;
+}
+
+blockquote a[href] {
+    color: black; /* ... and radio links that would be hard to read on papayawhip */
+}
+
+@media (max-width: 699px) {
+    div#text-table-of-contents {
+	max-width: 25em;
+	margin: auto;
+    }
+}
+
+@media (min-width: 700px) {
+    div#text-table-of-contents {
+	margin-left: 2em;
+	margin-right: 2em;
+	column-count: 2;
+	column-rule: 0.1em solid darkorange;
+	column-gap: 2em;
+    }
+}
+
+@media (min-width: 1000px) {
+    div#text-table-of-contents {
+	margin-left: 2em;
+	margin-right: 2em;
+	column-count: 3;
+	column-rule: 0.1em solid darkorange;
+	column-gap: 2em;
+    }
+}
+
+div#text-table-of-contents ul {
+    margin-top: 0; /* ensure multiple columns start at the same horizontal line */
+    list-style: none; /* hide bullets */
+    padding-left: 0; /* suppress indentation */
+}
+
+div#text-table-of-contents a {
+    text-decoration: none; /* hide underlines */
+    line-height: 1.5em; /* inter-link spacing */
+}
+
+div#text-table-of-contents>ul>li>a {
+    /* first level TOC links */
+    font-family: fantasy, arial, sans-serif;
+    font-size: 1.5em;
+    color: black;
+}
+
+div#text-table-of-contents>ul>li>ul>li>a {
+    /* second level TOC links */
+    font-family: fantasy, arial, sans-serif;
+    font-size: 1.25em;
+    color: darkorange;
+}
+
+div#text-table-of-contents>ul>li>ul>li>ul>li> a {
+    /* third level TOC links */
+    font-family: arial, sans-serif;
+    color: black;
+}
+
+div.outline-4, div.outline-text-3 {
+    max-width: 40em;
+    margin: auto;
+}
+
+blockquote {
+    /* in-universe stories, media, and vignettes */
+    font-family: courier, monospace;
+    color: black;
+    background-color: papayawhip;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+h1, h2, h3, h4 {
+    font-family: fantasy, arial, sans-serif;
+    text-transform: uppercase;
+}
+
+h1, h2, h3 {
+    background-color: darkorange;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 4em;
+    transform-origin: top right;
+    transform: scale(0.9, 1);
+    width: 90%;
+    margin-right: 0;
+    margin-left: auto;
+    padding-top: 0.5em;
+    padding-bottom: 0.25em;
+    padding-left: 0.5em;
+    position: relative; /* for corner cut */
+}
+
+h3 {
+    font-size: 3em;
+    transform-origin: top left;
+    transform: scale(0.9, 1);
+    text-align: right;
+    width: 60%;
+    margin-right: auto;
+    margin-left: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.4em;
+    padding-right: 0.5em;
+    position: relative; /* for corner cut */
+}
+
+@media screen { /* corner cutouts only look right when backgrounds are displayed */
+    h2::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-right: 0.3em solid darkorange;
+	border-bottom: 0.3em solid white;
+	width: 0;
+    }
+
+    h3::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border-left: 0.3em solid darkorange;
+	border-bottom: 0.3em solid white;
+	width: 0;
+    }
+}
+
+h4 {
+    font-size: 2em;
+    transform-origin: top left;
+    transform: scale(0.9, 1);
+}
+
+.org-ul li {
+    font-family: arial, sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+/* For arrow bullet points: */
+/* ul.org-ul li::marker { */
+/*     content: '➜'; */
+/*     color: darkorange; */
+/* } */
