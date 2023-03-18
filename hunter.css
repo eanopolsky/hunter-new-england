@@ -47,7 +47,7 @@ blockquote a[href] {
 
 @media (max-width: 699px) {
     div#text-table-of-contents {
-	max-width: 25em;
+	max-width: min(25em, 100% - 2em);
 	margin: auto;
     }
 }
@@ -104,7 +104,7 @@ div#text-table-of-contents>ul>li>ul>li>ul>li> a {
 }
 
 div.outline-4, div.outline-text-3 {
-    max-width: 40em;
+    max-width: min(40em, 100% - 2em);
     margin: auto;
 }
 
@@ -156,7 +156,7 @@ h3 {
     transform-origin: top left;
     transform: scale(0.9, 1);
     text-align: right;
-    width: 60%;
+    width: 70%;
     margin-right: auto;
     margin-left: 0;
     padding-top: 0.5em;
