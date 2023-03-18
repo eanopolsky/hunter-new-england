@@ -1,5 +1,6 @@
 body {
     font-family: "Times New Roman", Times, serif; /* default font */
+    overflow-wrap: break-word;
     margin: 0; /* h1, h2, etc. bars should go to the edge of the page */
 }
 
@@ -84,14 +85,14 @@ div#text-table-of-contents a {
 
 div#text-table-of-contents>ul>li>a {
     /* first level TOC links */
-    font-family: fantasy, arial, sans-serif;
+    font-family: "Anton", fantasy, arial, sans-serif;
     font-size: 1.5em;
     color: black;
 }
 
 div#text-table-of-contents>ul>li>ul>li>a {
     /* second level TOC links */
-    font-family: fantasy, arial, sans-serif;
+    font-family: "Anton", fantasy, arial, sans-serif;
     font-size: 1.25em;
     color: darkorange;
 }
@@ -119,13 +120,12 @@ blockquote {
 }
 
 h1, h2, h3, h4 {
-    font-family: fantasy, arial, sans-serif;
+    font-family: "Anton", fantasy, arial, sans-serif;
     text-transform: uppercase;
 }
 
 h1, h2, h3 {
     background-color: darkorange;
-    overflow: hidden;
 }
 
 h1 {
